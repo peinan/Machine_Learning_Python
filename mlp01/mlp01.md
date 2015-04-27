@@ -461,7 +461,8 @@ frac = 0.3 # テストに用いるデータの割合
 split_idx = int(frac * len(xb))
 # 全データの30%をランダムに選び出す
 shuffled = sp.random.permutation(list(range(len(xb))))
-test = sorted(shuffled[:split_idx]) # テスト用のデータインデックス配列 train = sorted(shuffled[split_idx:]) # 訓練用のデータインデックス配列
+test = sorted(shuffled[:split_idx]) # テスト用のデータインデックス配列
+train = sorted(shuffled[split_idx:]) # 訓練用のデータインデックス配列
 
 # それぞれ訓練データを用いて訓練を行う
 fbt1 = sp.poly1d(sp.polyfit(xb[train], yb[train], 1))

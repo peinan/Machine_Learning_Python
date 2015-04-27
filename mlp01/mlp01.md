@@ -181,6 +181,7 @@ array([ 1., 2., 3., 4.])
 
 #### 処理速度の比較
 
+
 - 1 から 1000 までの二乗和を計算。
 - 正確を期すため、同じ処理を 10000 回繰返してその合計を求める。
 
@@ -297,7 +298,8 @@ plt.scatter(x,y)
 plt.title("Web traffic over the last month")
 plt.xlabel("Time")
 plt.ylabel("Hits/hour")
-plt.xticks([w*7*24 for w in range(10)], ['week %i'%w focp r w in range(10)]) plt.autoscale(tight=True)
+plt.xticks([w*7*24 for w in range(10)], ['week %i'%w for w in range(10)])
+plt.autoscale(tight=True)
 plt.grid()
 plt.show()
 ```

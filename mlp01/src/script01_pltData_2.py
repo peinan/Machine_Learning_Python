@@ -10,7 +10,7 @@ import scipy as sp
 def error(f, x, y):
   return sp.sum((f(x) - y) ** 2)
 
-data = sp.genfromtxt('data/web_traffic.tsv', delimiter='\t')
+data = sp.genfromtxt('../data/web_traffic.tsv', delimiter='\t')
 x = data[:, 0]
 y = data[:, 1]
 

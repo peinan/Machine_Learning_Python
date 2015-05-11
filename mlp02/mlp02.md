@@ -91,6 +91,10 @@ def apply_model(example):
 feats = feats[~is_setosa]
 labels = labels[~is_setosa]
 virginica = (labels == 'virginica')
+
+# or 演算子や and 演算子を使いたい場合
+# np.logical_or(labels == 'virginica', labels == 'setosa')
+# という風に書けばいい
 ```
 
 - 次に、すべての特徴量とその閾値の組み合わせについて正解率（accuracy）を計算し、最も高い組み合わせを見つけたい。
